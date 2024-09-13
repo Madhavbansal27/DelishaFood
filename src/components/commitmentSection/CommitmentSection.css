@@ -1,0 +1,84 @@
+.commitment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 3rem auto;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .commitment-image {
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 50vh;
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .commitment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 55%;
+  }
+  
+  .commitment-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .commitment-list {
+    background-color: seashell;
+    padding: 1rem 0rem;
+    border-radius: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .commitment-list li {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding-left: 2rem; /* Space for the icon */
+  }
+  
+  .commitment-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -0.3rem; /* Adjust for vertical alignment */
+    width: 2rem; /* Control width of the tick */
+    height: 2rem; /* Control height of the tick */
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/011/858/556/small/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png.png") no-repeat center center;
+    background-size: contain; /* Scale the image to fit within the size */
+    display: inline-block;
+  }
+  .ordernowButton{
+    border: none;
+    width: 5.5rem;
+    padding: 0.7rem 0rem;
+    border-radius: 0.3rem;
+    background-color: #FEC700;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .commitment-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .commitment-image {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .commitment-content {
+      width: 100%;
+    }
+  }
+  

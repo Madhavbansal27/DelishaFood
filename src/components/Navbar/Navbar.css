@@ -1,0 +1,185 @@
+/* Common Styles (No change) */
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    position: relative; /* Added to manage positioning of hamburger menu */
+}
+
+.navbar .logo {
+    width: 170px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 20px;
+    color: #4f2e22;
+    font-size: 1.1rem;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px; /* Adjusted for spacing between icons and button */
+    align-items: center;
+}
+
+.navbar-right .cart-img {
+    width: 32px;
+}
+.navbar-search-icon{
+    position: relative;
+    cursor: pointer;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    top: -7px;
+    right: -3px;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 0.35rem;
+    background-color: #960C0B;
+}
+.navbar-right button {
+    border-radius: 50px;
+    font-size: 16px;
+    color: #4f2e22;
+    border: 1px solid #4f2e22;
+    padding: 10px 30px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-right button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #4f2e22;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #4f2e22;
+    border-radius: 3px;
+}
+
+/* Responsive Styles for Small Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90vw;
+        position: relative;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        right: 0;
+        background-color: #002a38;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        gap: 15px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .navbar-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 2; /* Ensure hamburger is above other content */
+    }
+
+    .navbar-right {
+        display: flex;
+        gap: 10px; /* Adjust for smaller screen spacing */
+        align-items: center;
+        margin-top: 10px; /* Adjust spacing as needed */
+        width: auto; /* Ensure width fits content */
+        justify-content: space-between; /* Align items horizontally */
+        position: relative; /* Ensure it doesn't overlap with the hamburger */
+        padding-right: 50px; /* Ensure enough space for hamburger */
+    }
+
+    .navbar-right .cart-img {
+        width: 28px;
+    }
+
+    .navbar-right button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .navbar-menu {
+        margin-top: 10px; /* Ensure menu does not overlap icons */
+    }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 480px) {
+    .navbar-right button{
+        z-index: 3;
+        position:relative;
+        transition: none;
+    }
+    .navbar-right button:hover{
+        background-color: #fff4f2;
+    }
+    .navbar {
+        padding: 15px 0;
+        width: 100vw;
+    }
+
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 10px;
+    }
+
+    .navbar-menu li {
+        font-size: 0.9rem;
+    }
+
+    .navbar-menu.open {
+        padding: 10px;
+    }
+
+    .hamburger .bar {
+        width: 20px;
+        height: 2px;
+    }
+}

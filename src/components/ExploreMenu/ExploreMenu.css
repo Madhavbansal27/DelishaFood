@@ -1,0 +1,106 @@
+.explore-menu {
+  width: 80%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.explore-menu h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.explore-menu-text {
+  text-align: center;
+  margin: 2rem 0rem 4rem 0rem;
+  font-size: 1.2rem;
+  color: #4f2e22;
+}
+
+.explore-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the list */
+  align-items: center;
+  gap: 20px;
+}
+
+.explore-menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(25% - 20px); /* Four items per row with a gap */
+  box-sizing: border-box;
+}
+
+.explore-menu-list-item img {
+  width: 5rem; /* Smaller image size */
+  min-width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: #4f2e22;
+  font-size: 0.75rem;
+}
+
+.explore-menu hr {
+  height: 2px;
+  margin: 15px 0px;
+  background-color: #4f2e22;
+  border: none;
+}
+
+.explore-menu-list-item .active {
+  border: 4px solid #B05732;
+  padding: 3px;
+}
+
+/* Medium Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .explore-menu {
+      width: 100%; /* Full width container to center items better */
+  }
+  .explore-menu-list {
+      justify-content: center; /* Ensure menu stays centered */
+  }
+  .explore-menu-list-item {
+      width: calc(12.5% - 20px); /* Adjust width to fit 8 items in 2 rows */
+  }
+  .explore-menu-list-item img {
+      width: 4.5rem; /* Adjusted size */
+  }
+}
+
+/* Large Devices */
+@media (min-width: 1025px) {
+  .explore-menu-list {
+      flex-wrap: nowrap;
+      gap: 30px;
+      justify-content: space-evenly;
+  }
+  .explore-menu-list-item img {
+      width: 8rem; /* Larger image size for large screens */
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .explore-menu-list {
+      gap: 10px;
+  }
+  .explore-menu-list-item {
+      width: calc(25% - 10px);
+      max-width: 80px;
+  }
+  .explore-menu-list-item img {
+      width: 4rem;
+  }
+  .explore-menu-list-item p {
+      font-size: 0.7rem;
+  }
+}

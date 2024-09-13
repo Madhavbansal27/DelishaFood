@@ -1,0 +1,76 @@
+.header {
+    background: url("../../assets/header_img.jpg") no-repeat;
+    height: 84vh;
+    background-size: cover;
+    position: relative;
+}
+
+.header-contents{
+    animation: fadeIn 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 50%;
+    position: absolute;
+    bottom: 25%;
+    right: 6vw;
+    gap: 1.2vw;
+}
+
+.header-contents h1{
+    font-size: max(4.5vw, 22px);
+    color: white;
+}
+
+.header-contents h1:nth-of-type(2){
+    font-size: max(4.5vw, 22px);
+    color: #F2C9A7;
+}
+
+.header-contents p{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4vw;
+    color: white;
+}
+
+.header-contents button{
+    border: 1px solid white;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: #960C0B;
+    font-size: max(1vw, 15px);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .header {
+        height: 40vh; /* Adjust the height to 40vh for smaller devices */
+    }
+
+    .header-contents {
+        max-width: 90%; /* Adjust width for smaller devices */
+        right: 5vw;
+        bottom: 10%;
+        gap: 1vw; /* Increase gap for better spacing */
+    }
+
+    .header-contents h1 {
+        font-size: max(6vw, 18px); /* Adjust font size for smaller screens */
+        display: inline-block;
+        margin-left: auto;
+    }
+
+    .header-contents p {
+        font-size: max(3.5vw, 14px); /* Adjust text size */
+    }
+
+    .header-contents button {
+        margin: auto;
+        padding: 2vw 3vw; /* Adjust padding for the button */
+        font-size: max(3.5vw, 13px); /* Adjust button font size */
+    }
+}
